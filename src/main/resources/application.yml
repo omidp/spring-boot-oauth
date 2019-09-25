@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: auth-server
+  datasource:
+    url: jdbc:postgresql://localhost:5432/authdb
+    username: auth
+    password: auth
+  jpa:
+    properties:
+      hibernate.dialect: org.hibernate.dialect.PostgreSQL95Dialect
+      hibernate.format_sql: true
+      hibernate.temp.use_jdbc_metadata_defaults: false
+      hibernate.jdbc.lob.non_contextual_creation: true
+    hibernate:
+      ddl-auto: update      
+management:
+  context_path: /admin
+logging:
+  level:
+    org.springframework.security: DEBUG
+
+
+    
+    
+
